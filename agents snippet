@@ -1,0 +1,7 @@
+<!-- Adicione esta linha à tabela de skills do seu AGENTS.md, seguindo as colunas que ela já tem -->
+
+| Skill | Quando usar |
+|---|---|
+| `skills/vulnerability-analysis/SKILL.md` | Quando a pessoa pedir análise, revisão ou correção de vulnerabilidade, ou descrever um ambiente possivelmente inseguro. Pergunta o contexto antes de agir. |
+
+<!-- Se a sua tabela tiver outras colunas, adapte. Conhecimento de apoio: agent/knowledge/security-basics.md -->
