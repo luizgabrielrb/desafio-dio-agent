@@ -1,0 +1,20 @@
+# Prompts para testar e tirar prints
+
+Rode o `hermes` num terminal aberto **na pasta do projeto**.
+
+## 1. Análise do app.py (código vulnerável de laboratório)
+> Atue como especialista em AppSec. O arquivo lab/app.py é um app de laboratório meu. Encontre a falha, explique por que ela é explorável, cite a técnica do MITRE ATT&CK e reescreva o código.
+
+## 2. Validação da correção
+> Troquei para lab/app_fixed.py. Faça uma nova análise e confirme se o SQL Injection foi mitigado e o que ainda falta.
+
+## 3. Perguntas de contexto (o print mais importante)
+> Tenho um servidor Ubuntu de laboratório exposto na internet. Como deixo ele seguro?
+
+Esperado: o agente **pergunta o contexto** antes de sugerir comandos.
+
+## 4. Comparação com chat genérico
+Faça a mesma pergunta do item 3 num chat genérico e salve os dois prints lado a lado em `docs/prints/`.
+
+## 5. Revisão da skill pelo próprio agente
+> Leia skills/vulnerability-analysis/SKILL.md e me pergunte, etapa por etapa, o que ficou ambíguo. Não quero resposta pronta.
