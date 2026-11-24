@@ -1,0 +1,38 @@
+# Fundamentos de segurança
+
+## Conceitos
+- **Vulnerabilidade**: fraqueza em um sistema, código ou processo que pode ser aproveitada. Ex.: consulta SQL montada com texto digitado.
+- **Ameaça**: algo ou alguém capaz de explorar a vulnerabilidade. Ex.: um atacante externo, um erro interno, malware.
+- **Exploração**: o ato de aproveitar a vulnerabilidade.
+- **Risco**: chance de uma ameaça explorar uma vulnerabilidade e o dano que isso causa. Pensamento útil: risco = probabilidade x impacto.
+- **Controle (mitigação)**: medida que reduz risco. Ex.: consulta parametrizada, MFA, firewall.
+- **Superfície de ataque**: tudo que está acessível a quem quer atacar (portas, rotas, formulários).
+
+## Tríade CIA
+- **Confidencialidade**: só quem deve acessa a informação. Violação: vazamento de dados.
+- **Integridade**: a informação não é alterada indevidamente. Violação: registro adulterado.
+- **Disponibilidade**: o sistema funciona quando necessário. Violação: queda por ataque ou falha.
+
+Ao analisar, diga qual(is) pilar(es) a falha afeta.
+
+## Impacto, probabilidade e severidade
+- **Impacto**: dano se a falha for explorada.
+- **Probabilidade**: facilidade e chance de exploração (exposição à internet, exige login?, é complexa?).
+- **Severidade**: resultado combinado, sempre ajustado ao contexto. A mesma falha pode ser crítica em produção exposta e baixa em laboratório isolado.
+
+## Referências para citar
+- **MITRE ATT&CK**: catálogo de técnicas de atacantes. Ex.: T1190 (Exploit Public-Facing Application), T1110 (Brute Force), T1078 (Valid Accounts).
+- **CWE**: catálogo de tipos de fraqueza. Ex.: CWE-89 (SQL Injection), CWE-798 (credencial fixa no código).
+- **OWASP Top 10**: principais riscos em aplicações web. SQL Injection está na categoria A03 (Injection) da edição 2021.
+
+## Boas práticas
+- **Privilégio mínimo**: dê só o acesso necessário.
+- **Defesa em profundidade**: várias camadas, nunca uma só.
+- **Nunca confie na entrada**: valide e use consultas parametrizadas.
+- **Senhas**: guarde apenas hash com algoritmo adequado (bcrypt, argon2, scrypt), nunca texto puro.
+- **Segredos fora do código**: variáveis de ambiente ou cofre de segredos.
+- **Atualizações**: mantenha sistema e dependências em dia.
+- **Exposição mínima**: feche portas desnecessárias, use SSH com chave, firewall restritivo.
+- **Logs e monitoramento**: sem registro, não há como detectar nem investigar.
+- **Backups testados**: garantem a disponibilidade após incidentes.
+- **Mudanças seguras**: antes de alterar um sistema, saiba reverter e teste em laboratório.
